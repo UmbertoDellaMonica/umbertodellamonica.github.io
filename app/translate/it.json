@@ -1,0 +1,175 @@
+{
+  "header": {
+    "greeting": "Ciao",
+    "am": "sono",
+    "role": "Appassionato di CyberSecurity",
+    "contact": "Contattami",
+    "cv": "Scarica CV",
+    "talk": "Contattami",
+    "scroll": "Scendi giù"
+  },
+  "about": {
+  "title": "Chi sono",
+  "experience": "Esperienza",
+  "experienceDetail": "Studente magistrale in Cybersecurity",
+  "intro": [
+  "Sto completando il mio percorso di Laurea Magistrale in Informatica con un focus sulla Cybersecurity, approfondendo tematiche come sviluppo software sicuro, penetration testing, crittografia e protocolli di sicurezza per sistemi web e embedded.",
+  "Sono appassionato di ricerca industriale e cybersecurity applicata a protocolli industriali e dispositivi embedded, dedicandomi all'analisi, al testing e alla protezione di architetture hardware-software complesse.",
+  "Durante il mio percorso di studi, ho collaborato con aziende di rilievo, contribuendo a progetti come la progettazione di dispositivi IoT sicuri, l'implementazione di sistemi IDS/IPS e lo sviluppo di applicazioni web sicure. Queste esperienze mi hanno permesso di consolidare competenze in valutazione delle vulnerabilità, modellazione delle minacce e implementazione di soluzioni di sicurezza pratiche.",
+  "Amo affrontare problemi di sicurezza complessi, combinando sperimentazione pratica e conoscenza teorica, con l’obiettivo di fornire soluzioni robuste e innovative sia nel campo della cybersecurity sia nella sicurezza dei sistemi embedded."
+],
+  "internships": {
+    "title": "Tirocini",
+    "items": [
+      {
+        "company": "LargeSystem (Napoli)",
+        "link": "https://www.largesyst.it/",
+        "duration": "4 mesi",
+        "description": "Tirocinio esterno durante la triennale, con focus sulla progettazione web e architetture a microservizi.",
+        "logo":"/assets/company/logo_large_system.svg"
+      },
+      {
+        "company": "STMicroelectronics (Napoli)",
+        "link": "https://www.st.com/",
+        "duration": "4 mesi",
+        "description": "Sviluppo di una suite di Penetration Test in accordo allo standard ISO 21434.",
+        "logo":"/assets/company/logo_st.png"
+      }
+    ]
+  },
+  "collaborations": {
+    "title": "Collaborazioni",
+    "items": [
+      {
+        "company": "LinearIT (Salerno)",
+        "link": "https://www.linearit.it/",
+        "duration": "2 mesi",
+        "description": "Sviluppo di una web app con blockchain privata usando Hyperledger Besu/FireFly e Flutter per il front-end.",
+        "logo":"/assets/company/logo_linear_it.png"
+
+      },
+      {
+        "company": "LinearIT (Salerno)",
+        "link": "https://www.linearit.it/",
+        "duration": "4 mesi",
+        "description": "Sviluppo di un dispositivo di sicurezza portatile (Custom Travel Router) con OpenWRT, IDS/IPS custom in Python, ad-block integrato e app mobile di gestione. Vincitore del 3° posto all'App Challenge 2024.",
+        "logo":"/assets/company/logo_linear_it.png"
+      }
+    ]
+  }
+},
+  "skills": {
+  "title": "Competenze",
+  "cybersecurity": {
+    "rev": "Reverse Engineering firmware/software",
+    "fwext": "Estrazione firmware via JTAG, SPI, UART",
+    "andrev": "Android Reverse Engineering",
+    "ics": "Sicurezza ICS/SCADA (Modbus, OPC-UA, SNAP7)",
+    "def": "Strategie difensive",
+    "net": "Network Protocol & Configuration",
+    "forensics": "Digital Forensics",
+    "crypto": "Crittografia"
+  },
+  "pentesting": {
+    "test": "Metodologie di penetration testing",
+    "osint": "Strumenti e tecniche OSINT",
+    "target": "Scoperta e enumerazione del target",
+    "port": "Port scanning",
+    "vuln": "Mappatura e analisi delle vulnerabilità",
+    "tax": "Vulnerabilità e tassonomie",
+    "exp": "Sviluppo exploit e PoC"
+  },
+  "ai": {
+    "ml": "Machine/Deep Learning",
+    "llm": "Large Language Models",
+    "gen": "Algoritmi genetici",
+    "prompt": "Prompt Engineering",
+    "cv": "Computer Vision"
+  },
+  "iot": {
+    "embed": "Programmazione embedded",
+    "iotsec": "IoT Security",
+    "proto": "Protocolli di comunicazione IoT/ICS",
+    "hw": "Analisi hardware (UART, JTAG, SPI)"
+  },
+  "programming": {
+    "java": "Java",
+    "c": "C",
+    "cpp": "C++",
+    "csharp": "C#",
+    "python": "Python",
+    "js": "JavaScript",
+    "dart": "Dart",
+    "solidity": "Solidity",
+    "vhdl": "VHDL/VHDP",
+    "bash": "Bash scripting"
+  },
+  "frameworks": {
+    "spring": "Spring Boot",
+    "flutter": "Flutter",
+    "angular": "Angular",
+    "react": "React",
+    "flask": "Flask",
+    "django": "Django"
+  },
+  "databases": {
+    "mysql": "MySQL",
+    "postgres": "PostgreSQL",
+    "neo4j": "Neo4J"
+  },
+  "other": {
+    "os": "Linux / macOS / Windows",
+    "virt": "Virtualizzazione",
+    "emulazione": "QEMU / VirtManager",
+    "open": "Contributi open-source"
+  }
+},
+  "projectsTitle": "Progetti",
+  "projects": [
+  {
+    "title": "ViLearERC-1155",
+    "description": "Gestione a microservizi di corsi e certificati come NFT. Tesi triennale sul progetto e sugli NFT.",
+    "technologies": "Spring Boot, Solidity, Ethereum Blockchain",
+    "database": "PostgreSQL",
+    "link": "https://github.com/UmbertoDellaMonica/ViLear-ERC1155"
+  },
+  {
+    "title": "Linksys-WRT54GL-Exploitation",
+    "description": "Penetration Testing Hardware sul router Linksys WRT54GL con estrazione JTAG e attacco reverse shell.",
+    "technologies": "Firmadyne, FirmAE, Ghidra, binwalk, openOCD",
+    "hardware": "JTAGulator, AttifyBadge",
+    "link": ""
+  },
+  {
+    "title": "Defnet",
+    "description": "Travel router custom con IDS/IPS, backend FastAPI, database SQLite e app mobile. Progetto di gruppo.",
+    "technologies": "FastAPI, SQLite, OpenWRT, AdGuardHome",
+    "link": "https://github.com/orgs/DefNet-Enterprise-Mobile-Application/repositories"
+  },
+  {
+    "title": "Filiera-Token",
+    "description": "Web App per gestione supply chain con blockchain privata Hyperledger Besu e Hyperledger FireFly. Front-End in Flutter.",
+    "technologies": "Hyperledger Besu, Hyperledger FireFly, Flutter",
+    "link": "https://github.com/UmbertoDellaMonica/Filiera-Token"
+  },
+  {
+    "title": "UniConnect",
+    "description": "Social network universitario con front-end Flutter, backend Spring Boot e database NoSQL Neo4J.",
+    "technologies": "Flutter, Spring Boot, Neo4J",
+    "link": "https://github.com/UmbertoDellaMonica/UniConnect"
+  }
+],
+  "contact": {
+    "title": "Contattami",
+    "send": "Invia Messaggio",
+    "sendM": "Invia un messaggio",
+    "name": "Nome e Cognome",
+    "mail": "Email",
+    "message": "Messaggio"
+  },
+  "footer": {
+    "aboutF": "Chi sono",
+    "contactF": "Contattami",
+    "copyright": "Tutti i diritti riservati."
+  }
+}
