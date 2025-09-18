@@ -131,33 +131,71 @@
     "description": "Gestione a microservizi di corsi e certificati come NFT. Tesi triennale sul progetto e sugli NFT.",
     "technologies": "Spring Boot, Solidity, Ethereum Blockchain",
     "database": "PostgreSQL",
-    "link": "https://github.com/UmbertoDellaMonica/ViLear-ERC1155"
+    "link": "https://github.com/UmbertoDellaMonica/ViLear-ERC1155",
+    "icons": ["SiSpringboot", "SiSolidity", "FaEthereum"],
+          "teamProject": "NO"
+
+
   },
   {
     "title": "Linksys-WRT54GL-Exploitation",
     "description": "Penetration Testing Hardware sul router Linksys WRT54GL con estrazione JTAG e attacco reverse shell.",
     "technologies": "Firmadyne, FirmAE, Ghidra, binwalk, openOCD",
     "hardware": "JTAGulator, AttifyBadge",
-    "link": ""
+    "link": "",
+    "icons": ["FaMicrochip", "FaBug", "/assets/icon/ghidra-icon.png"],
+          "teamProject": "NO"
+
+
   },
   {
     "title": "Defnet",
     "description": "Travel router custom con IDS/IPS, backend FastAPI, database SQLite e app mobile. Progetto di gruppo.",
     "technologies": "FastAPI, SQLite, OpenWRT, AdGuardHome",
-    "link": "https://github.com/orgs/DefNet-Enterprise-Mobile-Application/repositories"
+    "link": "https://github.com/orgs/DefNet-Enterprise-Mobile-Application/repositories",
+        "icons": ["SiFastapi", "SiSqlite", "SiOpensourceinitiative", "SiAdguard"],
+              "teamProject": "SI"
+
+
   },
   {
     "title": "Filiera-Token",
     "description": "Web App per gestione supply chain con blockchain privata Hyperledger Besu e Hyperledger FireFly. Front-End in Flutter.",
     "technologies": "Hyperledger Besu, Hyperledger FireFly, Flutter",
-    "link": "https://github.com/UmbertoDellaMonica/Filiera-Token"
+    "link": "https://github.com/UmbertoDellaMonica/Filiera-Token",
+        "icons": ["/assets/icon/besu-icon.png", "/assets/icon/firefly-icon.png", "SiFlutter"],
+              "teamProject": "SI"
+
+
   },
   {
     "title": "UniConnect",
     "description": "Social network universitario con front-end Flutter, backend Spring Boot e database NoSQL Neo4J.",
     "technologies": "Flutter, Spring Boot, Neo4J",
-    "link": "https://github.com/UmbertoDellaMonica/UniConnect"
-  }
+    "link": "https://github.com/UmbertoDellaMonica/UniConnect",
+        "icons": ["SiFlutter", "SiSpringboot", "SiNeo4J"],
+              "teamProject": "NO"
+
+
+  },
+  {
+      "title": "fp-mash",
+      "description": "Tool basato sulla fattorizzazione di Lyndon delle stringhe del DNA per il distanziamento genomico, con valutazione tramite distanza di Jaccard. Riscrittura completa del software con componente CLI.",
+      "technologies": "C++, Python, Flutter",
+      "link": "",
+      "icons": ["SiCplusplus", "SiPython", "SiFlutter"],
+            "teamProject": "SI"
+
+    },
+    {
+      "title": "MarcoSmiles-RhythmGames",
+      "description": "Gioco per imparare a suonare con le mani, usando rete neurale DQN per predire se l'utente può suonare la nota registrata durante il training.",
+      "technologies": "FastAPI, Unity",
+      "hardware": "Oculus Meta Quest 2/3",
+      "link": "",
+      "icons": ["SiFastapi", "SiUnity", "/assets/icon/oculus-icon.png"],
+      "teamProject": "SI"
+    }
 ],
   "contact": {
     "title": "Contattami",

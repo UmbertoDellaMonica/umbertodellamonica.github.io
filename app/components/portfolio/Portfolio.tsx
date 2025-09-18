@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { FaGithub } from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";
+import * as SiIcons from "react-icons/si";
 
 interface Project {
   title: string;
@@ -11,17 +13,13 @@ interface Project {
   hardware?: string;
   link?: string;
   icon?: string;
+  icons?: string[]; // array di icone o immagini custom
+  teamProject?: "SI" | "NO"; // indicazione progetto di squadra
 }
 
-interface Project {
-  title: string;
-  description?: string;
-  technologies?: string;
-  database?: string;
-  hardware?: string;
-  link?: string;
-  icon?: string;
-}
+// Tipi dei componenti icona
+type FaIconName = keyof typeof FaIcons;
+type SiIconName = keyof typeof SiIcons;
 
 const Portfolio: React.FC = () => {
   const { t } = useTranslation();
@@ -39,21 +37,65 @@ const Portfolio: React.FC = () => {
             key={index}
             className="relative bg-[#0f172a] border border-blue-800 rounded-2xl p-6 flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-300"
           >
-            {/* Icon e titolo */}
+            {/* Badge progetto di squadra */}
+            {project.teamProject && project.teamProject === "SI" && (
+              <div className="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide shadow-md">
+                Team Project
+              </div>
+            )}
+
+            {/* Icone principali */}
+            {project.icons && (
+              <div className="flex justify-center gap-4 mb-4 text-2xl text-white">
+                {project.icons.map((iconName, idx) => {
+                  // Se è un'immagine custom
+                  if (iconName.startsWith("/")) {
+                    return (
+                      <Image
+                        key={idx}
+                        src={iconName}
+                        alt={project.title}
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    );
+                  }
+
+                  // Altrimenti è un'icona Fa o Si
+                  const FaComponent: React.ComponentType | undefined = (
+                    FaIcons as Record<FaIconName, React.ComponentType>
+                  )[iconName as FaIconName];
+                  const SiComponent: React.ComponentType | undefined = (
+                    SiIcons as Record<SiIconName, React.ComponentType>
+                  )[iconName as SiIconName];
+
+                  const IconComponent = FaComponent || SiComponent;
+
+                  return IconComponent ? <IconComponent key={idx} /> : null;
+                })}
+              </div>
+            )}
+
+            {/* Icona principale e titolo */}
             <div className="flex flex-col items-center text-center">
               {project.icon && (
-                <img
+                <Image
                   src={project.icon}
                   alt={project.title}
-                  className="w-16 h-16 mb-4"
+                  width={64}
+                  height={64}
+                  className="mb-4"
                 />
               )}
               <h3 className="text-xl font-semibold text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-300 text-sm mb-4">
-                {project.description}
-              </p>
+              {project.description && (
+                <p className="text-gray-300 text-sm mb-4">
+                  {project.description}
+                </p>
+              )}
             </div>
 
             {/* Tecnologie come badge */}
@@ -83,7 +125,7 @@ const Portfolio: React.FC = () => {
                 rel="noreferrer"
                 className="mt-auto flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
               >
-                <FaGithub /> View Project
+                <FaIcons.FaGithub /> View Project
               </a>
             )}
           </div>
