@@ -1,6 +1,5 @@
 "use client";
-import React, { useRef, useState, FormEvent } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState, FormEvent } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { importantInfo } from "@/app/lib/static_info";
@@ -8,9 +7,7 @@ import { importantInfo } from "@/app/lib/static_info";
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const [messageSent, setMessageSent] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
 
-  // Recupera tutto l'oggetto contact
   const contactText = t("contact", { returnObjects: true }) as {
     title: string;
     send: string;
@@ -21,28 +18,28 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
     e.preventDefault();
+
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("user_name") as HTMLInputElement)
+      .value;
+    const email = (form.elements.namedItem("user_email") as HTMLInputElement)
+      .value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
+      .value;
+
+    // Crea il mailto link
+    const subject = encodeURIComponent(`Message from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    const mailtoLink = `mailto:${importantInfo.contactEmail}?subject=${subject}&body=${body}`;
+
+    // Apri il client di posta
+    window.location.href = mailtoLink;
+
     setMessageSent(true);
-
-    if (formRef.current) {
-      emailjs
-        .sendForm(
-          "service_36b9u4p",
-          "template_49zqar2",
-          formRef.current,
-          "RPkPEHuXhGLJs5ql3"
-        )
-        .then(
-          (result) => console.log(result.text),
-          (error) => console.log(error.text)
-        );
-    }
-
-    e.currentTarget.reset();
+    form.reset();
   };
 
   return (
@@ -69,11 +66,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Contact Form */}
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-5"
-        >
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <input
             type="text"
             placeholder={contactText.name}
@@ -103,7 +96,7 @@ const Contact: React.FC = () => {
           </button>
           {messageSent && (
             <span className="text-sm text-gray-300">
-              Thanks, I will reply ASAP 🙂
+              Thanks, your email client should open now 🙂
             </span>
           )}
         </form>
