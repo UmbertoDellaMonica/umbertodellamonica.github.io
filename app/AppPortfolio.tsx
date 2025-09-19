@@ -3,7 +3,7 @@ import React from "react";
 import Topbar from "./components/topbar/TopBar";
 import Header from "./components/header/Header";
 import Intro from "./components/intro/Intro";
-import Portfolio from "./components/portfolio/Portfolio";
+import Portfolio from "./components/project/PortfolioProject";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Publishing from "./components/publishing/Publishing";
