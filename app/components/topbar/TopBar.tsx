@@ -4,21 +4,27 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiBookOpen, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 const Topbar = () => {
   const [activeNav, setActiveNav] = useState("#home");
+  const { t } = useTranslation();
 
   const navItems = [
-    { href: "#home", icon: <AiOutlineHome />, label: "Home" },
-    { href: "#about", icon: <AiOutlineUser />, label: "Chi Sono" },
-    { href: "#publishing", icon: <BiBookOpen />, label: "Pubblicazioni" },
-    { href: "#skills", icon: <BiBook />, label: "Skills" },
-    { href: "#projects", icon: <RiServiceLine />, label: "Projects" },
-    { href: "#contact", icon: <BiMessageSquareDetail />, label: "Contatti" },
+    { href: "#home", icon: <AiOutlineHome />, label: t("nav.home") },
+    { href: "#about", icon: <AiOutlineUser />, label: t("nav.about") },
+    { href: "#publishing", icon: <BiBookOpen />, label: t("nav.publishing") },
+    { href: "#skills", icon: <BiBook />, label: t("nav.skills") },
+    { href: "#projects", icon: <RiServiceLine />, label: t("nav.projects") },
+    {
+      href: "#contact",
+      icon: <BiMessageSquareDetail />,
+      label: t("nav.contact"),
+    },
   ];
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id], header[id]"); // 👈 ora include anche header
+    const sections = document.querySelectorAll("section[id], header[id]");
 
     const observer = new IntersectionObserver(
       (entries) => {

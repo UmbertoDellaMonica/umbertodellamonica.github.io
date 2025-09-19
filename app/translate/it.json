@@ -1,4 +1,12 @@
 {
+  "nav": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "publishing": "Pubblicazioni",
+    "skills": "Skills",
+    "projects": "Progetti",
+    "contact": "Contatti"
+  },
   "header": {
     "greeting": "Ciao",
     "am": "sono",
@@ -17,7 +25,7 @@
   "Sono appassionato di ricerca industriale e cybersecurity applicata a protocolli industriali e dispositivi embedded, dedicandomi all'analisi, al testing e alla protezione di architetture hardware-software complesse.",
   "Durante il mio percorso di studi, ho collaborato con aziende di rilievo, contribuendo a progetti come la progettazione di dispositivi IoT sicuri, l'implementazione di sistemi IDS/IPS e lo sviluppo di applicazioni web sicure. Queste esperienze mi hanno permesso di consolidare competenze in valutazione delle vulnerabilità, modellazione delle minacce e implementazione di soluzioni di sicurezza pratiche.",
   "Amo affrontare problemi di sicurezza complessi, combinando sperimentazione pratica e conoscenza teorica, con l’obiettivo di fornire soluzioni robuste e innovative sia nel campo della cybersecurity sia nella sicurezza dei sistemi embedded."
-],
+  ],
   "internships": {
     "title": "Tirocini",
     "items": [
