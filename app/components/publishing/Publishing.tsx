@@ -27,7 +27,7 @@ const Publishing: React.FC = () => {
   return (
     <section id="publishing" className="py-20">
       <h2 className="text-3xl font-bold text-center text-white mb-16">
-        Publications
+        Publishing
       </h2>
 
       <div className="container mx-auto grid gap-10 md:grid-cols-1">

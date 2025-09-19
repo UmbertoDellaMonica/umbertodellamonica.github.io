@@ -11,7 +11,7 @@
   "about": {
   "title": "About Me",
   "experience": "Experience",
-  "experienceDetail": "Master's student in Cybersecurity",
+  "experienceDetail": "Master student in Cybersecurity",
   "intro": [
   "I am completing my Master's degree in Computer Science with a focus on Cybersecurity, where I am deepening my knowledge in secure software development, penetration testing, cryptography, and security protocols for both web and embedded systems.",
   "I am passionate about industrial research and cybersecurity applied to industrial protocols and embedded devices, dedicating myself to analyzing, testing, and securing complex hardware-software architectures.",
@@ -141,17 +141,16 @@
     "technologies": "Firmadyne, FirmAE, Ghidra, binwalk, openOCD",
     "hardware": "JTAGulator, AttifyBadge",
     "link": "",
-    "icons": ["FaMicrochip", "FaBug", "/assets/icon/ghidra-icon.png"],
+    "icons": ["SiCplusplus","FaMicrochip", "FaBug", "/assets/icon/ghidra-icon.png"],
     "teamProject":"NO"
   },
   {
-    "title": "Defnet",
+    "title": "DefNet",
     "description": "Custom travel router with IDS/IPS, FastAPI backend, SQLite database and mobile app.",
     "technologies": "FastAPI, SQLite, OpenWRT, AdGuardHome",
     "link": "https://github.com/orgs/DefNet-Enterprise-Mobile-Application/repositories",
     "icons": ["SiFastapi", "SiSqlite", "SiOpensourceinitiative", "SiAdguard"],
     "teamProject":"SI"
-
   },
   {
     "title": "Filiera-Token",
@@ -160,7 +159,6 @@
     "link": "https://github.com/UmbertoDellaMonica/Filiera-Token",
     "icons": ["/assets/icon/besu-icon.png", "/assets/icon/firefly-icon.png", "SiFlutter"],
     "teamProject":"SI"
-
   },
   {
     "title": "UniConnect",

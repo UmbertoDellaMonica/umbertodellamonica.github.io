@@ -21,12 +21,12 @@ interface Project {
 type FaIconName = keyof typeof FaIcons;
 type SiIconName = keyof typeof SiIcons;
 
-const Portfolio: React.FC = () => {
+const PortfolioProject: React.FC = () => {
   const { t } = useTranslation();
   const projects = t("projects", { returnObjects: true }) as Project[];
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="projects" className="py-20">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
         {t("projectsTitle")}
       </h2>
@@ -135,4 +135,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioProject;
