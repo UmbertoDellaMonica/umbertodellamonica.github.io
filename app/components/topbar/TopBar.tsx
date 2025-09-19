@@ -18,7 +18,7 @@ const Topbar = () => {
   ];
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
+    const sections = document.querySelectorAll("section[id], header[id]"); // 👈 ora include anche header
 
     const observer = new IntersectionObserver(
       (entries) => {
